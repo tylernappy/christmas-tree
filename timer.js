@@ -17,6 +17,10 @@ function toggleLights(state) {
   });
 }
 
+app.get('/', function(req, res) {
+  console.log('Still alive!');
+});
+
 app.listen(port, function() {
   console.log('Listening on port: ' + port);
 });
@@ -60,3 +64,8 @@ const lightsOnEveningWeekday = new CronJob({
   start: true,
   timeZone: 'America/New_York'
 });
+
+// Keep heroku app alive
+setInterval(function() {
+    needle.get("http://christmas-lights-tn.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
