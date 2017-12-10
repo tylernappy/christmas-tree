@@ -19,6 +19,7 @@ function toggleLights(state) {
 
 app.get('/', function(req, res) {
   console.log('Still alive!');
+  res.sendStatus(200);
 });
 
 app.listen(port, function() {
