@@ -68,5 +68,7 @@ const lightsOnEveningWeekday = new CronJob({
 
 // Keep heroku app alive
 setInterval(function() {
-    needle.get("http://christmas-lights-tn.herokuapp.com");
+  needle.get("http://christmas-lights-tn.herokuapp.com/", function(err, resp) {
+    if (err) console.log(err);
+  });
 }, 300000); // every 5 minutes (300000)

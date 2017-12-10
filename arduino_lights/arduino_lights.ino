@@ -30,6 +30,6 @@ void loop() {
   snow_flake();
   red_to_green();
   progression();
-  rainbow();
+//  rainbow();
   light_climb();
 }
