@@ -37,9 +37,9 @@ const lightsOnMorning = new CronJob({
 });
 
 const lightsOffEvening = new CronJob({
-  cronTime: '00 30 23 * * 1-7',
+  cronTime: '00 00 23 * * 1-7',
   onTick: function() {
-    // Lights off every day at 11:30:00 PM
+    // Lights off every day at 11:00:00 PM
     toggleLights('off');
   },
   start: true,
